@@ -87,18 +87,19 @@ This document provides a categorized list of essential websites and tools used b
 
 ## 🗃️ Important Log Sources (Splunk) (A–Z)
 
-| Log Source | Purpose / Use Case |
-|------------|--------------------|
-| Active Directory Logs | User logon activity, group membership changes, privilege escalation. |
-| AWS CloudTrail | Tracks all user and API activity within AWS environment. |
-| Azure Activity Logs | Monitors subscription-level events and admin actions. |
-| DNS Logs | Tracks domain resolutions to detect beaconing, C2 traffic, typo-squatting. |
-| EDR Logs | Endpoint behavior, process creation, malware detection. |
-| Firewall Logs | Ingress/egress traffic, denied connections, lateral movement detection. |
-| Linux Syslog | General logging for services, auth, cron, and kernel activities. |
-| PowerShell Logs | Detects script execution, encoded commands, recon activity. |
-| Proxy Logs | User internet access, URL categorization, malware delivery attempts. |
-| Windows Event Logs | System, Security, Application logs including logons, process, service changes. |
+| Log Source                | Purpose / Use Case                                                        | Details / Examples                                                                                   |
+|---------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| Active Directory Logs      | User logon activity, group membership changes, privilege escalation       | Logs related to Kerberos authentication, user creation/deletion, group changes, domain attacks     |
+| AWS CloudTrail             | Tracks all user and API activity within AWS environment                   | Records API calls: user logins, EC2 actions, S3 access, IAM changes                                |
+| Azure Activity Logs        | Monitors subscription-level events and admin actions                     | Tracks RBAC changes, key vault access, VM start/stop events                                        |
+| DNS Logs                   | Tracks domain resolutions to detect beaconing, C2 traffic, typo-squatting | Internal DNS resolution logs, detects lookups to malicious IPs or C2 domains                       |
+| EDR Logs                   | Endpoint behavior, process creation, malware detection                    | Shows malicious behavior, file access, process trees, detections (CrowdStrike, SentinelOne, etc.)  |
+| Firewall Logs              | Ingress/egress traffic, denied connections, lateral movement detection    | Tracks allowed/denied traffic, geo-based access, rule hits (Palo Alto, Fortinet, Cisco ASA, etc.)  |
+| Linux Syslog / Audit Logs  | General logging for services, auth, cron, kernel activities               | Auth logins, sudo usage, file access, command execution (/var/log/auth.log, /var/log/audit/audit.log) |
+| PowerShell Logs            | Detects script execution, encoded commands, recon activity                | Logs script executions, module loads, fileless malware indicators                                  |
+| Proxy Logs                 | User internet access, URL categorization, malware delivery attempts      | Outbound web traffic, detects C2 communication, malware downloads (Blue Coat, Squid, etc.)        |
+| Windows Event Logs         | System, Security, Application logs including logons, process, service changes | Logon/logoff events, privilege use, object access, service changes                                 |
+
 
 ---
 
