@@ -1,6 +1,6 @@
 # 🛡️ Incident Response - Essential Tools & Websites
 
-This document provides a categorized list of essential websites and tools used by incident responders for rapid investigation, triage, and threat intelligence.
+This document provides a categorized list of essential websites and tools used by incident responders for rapid investigation, triage, and threat intelligence, imp log sources/fields (splunk).
 
 ---
 
@@ -100,22 +100,21 @@ This document provides a categorized list of essential websites and tools used b
 | Proxy Logs                 | User internet access, URL categorization, malware delivery attempts      | Outbound web traffic, detects C2 communication, malware downloads (Blue Coat, Squid, etc.)        |
 | Windows Event Logs         | System, Security, Application logs including logons, process, service changes | Logon/logoff events, privilege use, object access, service changes                                 |
 
-
 ---
 
 ## 🧾 Key Fields to Monitor (Splunk) (A–Z by Log Source)
 
-| Log Source | Key Fields |
-|------------|------------|
-| Active Directory | `user`, `event_id`, `group`, `timestamp`, `source_ip` |
-| AWS CloudTrail | `eventName`, `userIdentity`, `sourceIPAddress`, `requestParameters`, `eventTime` |
-| DNS Logs | `query_name`, `response_code`, `query_type`, `client_ip`, `timestamp` |
-| EDR Logs | `hostname`, `process_name`, `parent_process`, `cmdline`, `timestamp`, `user` |
-| Firewall Logs | `src_ip`, `dest_ip`, `src_port`, `dest_port`, `action`, `protocol` |
-| Linux Syslog | `facility`, `severity`, `timestamp`, `hostname`, `process`, `message` |
-| PowerShell Logs | `script_block_text`, `command_line`, `user`, `host_application`, `timestamp` |
-| Proxy Logs | `user`, `url`, `http_status`, `timestamp`, `method`, `user_agent` |
-| Windows Event Logs | `event_id`, `user`, `process_name`, `logon_type`, `timestamp`, `source_ip` |
+| Log Source           | Key Fields to Monitor                                            |
+|----------------------|-----------------------------------------------------------------|
+| Active Directory     | user, event_id, group, timestamp, source_ip                      |
+| AWS CloudTrail       | eventName, userIdentity, sourceIPAddress, requestParameters, eventTime |
+| DNS Logs             | query_name, response_code, query_type, client_ip, timestamp      |
+| EDR Logs             | hostname, process_name, parent_process, cmdline, timestamp, user |
+| Firewall Logs        | src_ip, dest_ip, src_port, dest_port, action, protocol           |
+| Linux Syslog         | facility, severity, timestamp, hostname, process, message        |
+| PowerShell Logs      | script_block_text, command_line, user, host_application, timestamp|
+| Proxy Logs           | user, url, http_status, timestamp, method, user_agent            |
+| Windows Event Logs   | event_id, user, process_name, logon_type, timestamp, source_ip   |
 
 ---
 
