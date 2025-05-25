@@ -85,7 +85,7 @@ This document provides a categorized list of essential websites and tools used b
 
 ---
 
-## 🗃️ Important Log Sources (A–Z)
+## 🗃️ Important Log Sources (Splunk) (A–Z)
 
 | Log Source | Purpose / Use Case |
 |------------|--------------------|
@@ -102,7 +102,7 @@ This document provides a categorized list of essential websites and tools used b
 
 ---
 
-## 🧾 Key Fields to Monitor (A–Z by Log Source)
+## 🧾 Key Fields to Monitor (Splunk) (A–Z by Log Source)
 
 | Log Source | Key Fields |
 |------------|------------|
