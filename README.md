@@ -119,8 +119,6 @@ This document provides a categorized list of essential websites and tools used b
 ---
 
 ## 📁 File Version 1.1
-
-- **File Name:** `incident-response-tools.md`
 - **Author:** [Tanishq Nama]
 - **Last Updated:** 25th May, 2025
 
